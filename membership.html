@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Church Membership Sign Up</title>
+    <link rel="stylesheet" href="membership.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="85b911c3440d8db379449e4c67b41d1f.jpeg"
+        alt="AFM Logo"
+        width="100"
+        height="100"
+      />
+      <h1>AFM House Of Prayer</h1>
+      <nav>
+    <ul class="nav-links">
+        <li><a href="hopweb.html">HOME</a></li>
+        <li class="dropdown">
+            <a href="about.html">ABOUT</a>
+            <div class="dropdown-content">
+                <a href="about.html#the-church">THE CHURCH</a>
+                <a href="about.html#youth">OUR YOUTH</a>
+                <a href="about.html#kids-sunday-school">KIDz SUNDAY SCHOOL</a>
+                <a href="about.html#mens-fellowship">MEN's FELLOWSHIP</a>
+                <a href="about.html#womens-fellowship">WOMEN's FELLOWSHIP</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="services.html">SERVICE</a>
+            <div class="dropdown-content">
+                <a href="services.html#main-service">MAIN CHURCH SERVICE</a>
+                <a href="services.html#youth-service">SWAG YOUTH SERVICE</a>
+                <a href="services.html#kids-zone">SUNDAY SCHOOL SERVICE</a>
+            </div>
+        </li>
+        <li><a href="events.html">EVENTS</a></li>
+        <li class="dropdown">
+    <a href="membership.html">JOIN</a>
+    <div class="dropdown-content">
+        <a href="membership.html#register">REGISTER</a>
+        <a href="login.html">LOG-IN</a>
+    </div>
+</li>
+
+        <li class="dropdown">
+    <a href="#">CONTACT</a>
+    <div class="dropdown-content">
+        <a href="about.html#pastor-message">Snr PASTOR</a>
+        <a href="about.html#deputy-pastor">DEPUTY</a>
+        <a href="about.html#youth-pastor">YOUTH PASTOR</a>
+        <a href="about.html#location">ADDRESS</a>
+    </div>
+</li>
+
+    </ul>
+</nav>
+
+  </header>
+    <div class="container">
+      <h1>AFM~House Of Prayer</h1>
+      <h1>Church Membership Sign-Up</h1>
+      <form id="membership">
+        <!-- Grid structure starts -->
+        <div class="grid-container">
+          <div class="grid-item">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="grid-item">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="grid-item">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="grid-item">
+            <label for="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Enter your address"
+            />
+          </div>
+          <div class="grid-item">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required />
+          </div>
+          <div class="grid-item">
+            <label for="membership_type">Membership Type:</label>
+            <select id="membership_type" name="membership_type" required>
+              <option value="Bronze">Bronze</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+          </div>
+          <div class="grid-item">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Enter password"
+            />
+          </div>
+          <div class="grid-item">
+            <label for="confirm_password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              required
+              placeholder="Confirm password"
+            />
+          </div>
+        </div>
+        <!-- Submit button -->
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Linking external JavaScript file -->
+    <script src="membership.js"></script>
+  </body>
+</html>

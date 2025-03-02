@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    color: #fff; /* White text color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Header Section */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: aquamarine; /* Header background color */
+}
+h1 {
+    font-size: 55px; /* Example font size */
+    color: #0056b3;
+    font-family: serif; /* Sets the font family to serif */
+}
+
+
+
+header img {
+    margin-right: 20px;
+    border-radius: 50%; /* Circular logo */
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    color: rgb(255, 0, 0); /* Text color for title */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* General Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center; /* Center align navigation */
+    align-items: center;
+    background-color: ; /* Same as your header background */
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange links horizontally */
+}
+
+.nav-links li {
+    margin: 0 10px; /* Space between buttons */
+}
+
+/* Button-like Links */
+.nav-links a {
+    display: block;
+    background-color: none; /* Button background color */
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3; /* Hover effect */
+}
+
+/* Dropdown Styles */
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    min-width: 160px; /* Ensure a minimum width for the dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    z-index: 1000; /* Ensure the dropdown is above other content */
+}
+
+nav .dropdown-content a {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+nav .dropdown-content a:hover {
+    background-color: #cd0505;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+    z-index: 1000;
+}

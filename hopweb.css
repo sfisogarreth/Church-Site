@@ -1,0 +1,537 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    color: #fff; /* White text color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #a1d1e6);
+}
+
+/* Header Section */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(135deg, #59a5f2, #a1d1e6);
+}
+h1 {
+    font-size: 55px; /* Example font size */
+    color: #ff0202e3;
+    font-family: serif; /* Sets the font family to serif */
+}
+
+
+
+header img {
+    margin-right: 20px;
+    border-radius: 50%; /* Circular logo */
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    color: rgb(255, 0, 0); /* Text color for title */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* General Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center; /* Center align navigation */
+    align-items: center;
+    background-color: ; /* Same as your header background */
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange links horizontally */
+}
+
+.nav-links li {
+    margin: 0 10px; /* Space between buttons */
+}
+
+/* Button-like Links */
+.nav-links a {
+    display: block;
+    background-color: none; /* Button background color */
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3; /* Hover effect */
+}
+
+/* Dropdown Styles */
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    min-width: 160px; /* Ensure a minimum width for the dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    z-index: 1000; /* Ensure the dropdown is above other content */
+}
+
+nav .dropdown-content a {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+nav .dropdown-content a:hover {
+    background-color: #cd0505;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+    z-index: 1000;
+}
+
+/* Main Section with Background Image */
+.main {
+    background: url('https://assets.christianpost.com/images/cache/image/13/90/139033_w_700_467.webp') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.overlay-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 0px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #fff;
+    height: 500px;
+}
+
+.stay-connected {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin: 10px;
+}
+.time {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin: 10px;
+}
+.social-section {
+    padding: 20px;
+}
+
+.social-section p {
+    font-size: 1.2rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.icons a {
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #ff0000;
+}
+
+/* Newsletter Signup */
+}
+
+.newsletter-section {
+    margin-top: 200px;
+    padding-right: 2px;
+}
+.get-news {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: rgb(30, 0, 224);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff0202e3;
+}
+
+/* Footer Section */
+#confetti-container canvas {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust as needed */
+    z-index: 10; /* Ensure it doesn't block content unnecessarily */
+    pointer-events: none; /* Prevent blocking user interactions */
+  }
+  
+
+.existance {
+    background-color: rgb(255, 255, 255);
+    display: flex; /* Enables flexbox layout */
+    width: 100%;
+    margin: 0;
+
+}
+.text{
+    margin: 0px;
+}
+
+.text pre {
+    background-color: rgb(255, 255, 255);
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally (optional) */
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+    width: 100%;
+    padding: 5px;
+}
+.years {
+    width: 100%;
+}
+.years .mg {
+    align-items: center;
+}
+.text h3 pre {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    size: 80px;
+    padding: 0px;
+    margin: 0px;
+}
+.text h3 {
+    margin: 0px;
+}
+.existance h1{
+    color: black;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+
+.midSection h2{
+    text-align: center;
+}
+.midSection {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Distribute items with space */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.getInvolved,
+.joinHomeCell,
+.youth,
+.kidCorner {
+    width: 20%; /* Adjusted width */
+    margin: 10px; /* Adds spacing around each div */
+    box-sizing: border-box; /* Include padding in width */
+    padding: 10px; /* Internal spacing */
+    text-align: center;
+}
+
+.getInvolved img,
+.joinHomeCell img,
+.youth img,
+.kidCorner img {
+    width: 100%; /* Makes images responsive */
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-top: 10px; /* Space between text and image */
+}
+.giving-section {
+    background: linear-gradient(135deg, #f8f9fa, #a1d1e6); /* Soft gradient background */
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  }
+  
+  .giving-section .giving-content {
+    max-width: 800px; /* Center content in a constrained width */
+    margin: 0 auto;
+  }
+  
+  .giving-section h2 {
+    font-size: 2.5rem; /* Large, prominent heading */
+    margin-bottom: 20px;
+    color: #1a1a1a; /* Dark text color for good contrast */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .giving-section p {
+    font-size: 1.25rem; /* Larger font size for emphasis */
+    margin-bottom: 30px;
+    color: #333333;
+    line-height: 1.6; /* Improved readability */
+  }
+  
+  .giving-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add spacing between buttons */
+    margin-top: 20px;
+  }
+  
+  .donate-btn,
+  .learn-more-btn {
+    background-color: #ff6f61; /* Eye-catching red button color */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 15px 30px; /* Larger padding for a modern button size */
+    font-size: 1.125rem; /* Slightly larger text */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px; /* Fully rounded buttons */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+  }
+  
+  .donate-btn:hover {
+    background-color: #d9534f; /* Darker red for hover effect */
+    transform: translateY(-3px); /* Slight lift on hover */
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #5bc0de; /* Different hover color for contrast */
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    .giving-options {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      gap: 15px; /* Adjust spacing for vertical alignment */
+    }
+  
+    .donate-btn,
+    .learn-more-btn {
+      width: 100%; /* Full-width buttons on mobile */
+    }
+  }
+  
+
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid #444;
+    color: #fff;
+    clear: both;
+    background-color: rgb(2, 20, 137);
+}
+.year img {
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+.wedding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: "The Nautigal", serif;
+    color: rgb(201, 15, 136);
+}
+
+.wedding .imgbtn {
+    border: none;
+    background: transparent;
+    margin: 20px 0;
+}
+
+.wedding .imgbtn img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.wedding .imgbtn img:hover {
+    transform: scale(1.1);
+}
+
+.readmorebt {
+    display: block;
+    margin: 30px auto 30px auto;
+    padding: 15px 30px;
+    background-color: #120060;
+    color: rgb(201, 15, 136);
+    border: 3px solid #92007f;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.readmorebt:hover {
+    background-color: white;
+    color: #120060;
+}
+
+pre {
+    font-size: 18px;
+    color: #333;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.hes {
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgb(201, 15, 136);
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wedding {
+        padding: 30px 10px;
+    }
+
+    .wedding .imgbtn img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .readmorebt {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    pre {
+        font-size: 16px;
+    }
+}
+.countdown-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 400px;
+    font-size: 2rem;
+  }
+  .countdown h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 400px;
+    font-size: 3rem;
+  }
+  .countdown-item {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 20px;
+    background: #0de2e6;
+    border-radius: 10px;
+    align-items: flex-start;
+    color: #fe0000;
+    font-size: 3rem;
+  }
+  .countdown-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #000000;
+  }

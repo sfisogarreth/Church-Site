@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Joining</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .navbar li {
+            flex: 1;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        #confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allows clicks to pass through */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <div class="image">
+                <img src="85b911c3440d8db379449e4c67b41d1f.jpeg" alt="afm logo" width="100px" height="100px" align="left">
+            </div>
+            <li><a href="hopweb.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="membership.html">JOIN US</a></li>
+            <li><a href="">ADDRESS</a></li>
+            <li><a href="#location">LOCATION</a></li>
+            <li><a href="welcome.html"></a></li>
+        </ul>
+    </div>
+
+    <h1>Thank You for Joining The House Of Prayer Family!</h1>
+
+		<div class="container">
+			<div class="image">
+                <img src="85b911c3440d8db379449e4c67b41d1f.jpeg" alt="afm logo" width="300px" height="300px" align="left">
+            </div>
+	
+				<p><span class="highlight">Full Name:</span> <span id="name"></span></p>
+				<p><span class="highlight">Email:</span> <span id="email"></span></p>
+				<p><span class="highlight">Phone Number:</span> <span id="phone"></span></p>
+				<p><span class="highlight">Home Address:</span> <span id="address"></span></p>
+				<p><span class="highlight">Birthdate:</span> <span id="birthdate"></span></p>
+				<p><span class="highlight">Membership Status:</span> <span id="membership_type"></span></p>
+			</div>
+
+    <canvas id="confetti"></canvas>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const name = localStorage.getItem('name');
+            const email = localStorage.getItem('email');
+            const phone = localStorage.getItem('phone');
+            const address = localStorage.getItem('address');
+            const birthdate = localStorage.getItem('birthdate');
+            const membership_type = localStorage.getItem('membership_type');
+
+            document.getElementById('name').textContent = name || 'N/A';
+            document.getElementById('email').textContent = email || 'N/A';
+            document.getElementById('phone').textContent = phone || 'N/A';
+            document.getElementById('address').textContent = address || 'N/A';
+            document.getElementById('birthdate').textContent = birthdate || 'N/A';
+            document.getElementById('membership_type').textContent = membership_type || 'N/A';
+
+            // Confetti animation
+            const confettiCanvas = document.getElementById('confetti');
+            const confettiContext = confettiCanvas.getContext('2d');
+            let confetti = [];
+
+            function createConfetti() {
+                const colors = ['#FFC107', '#FF5722', '#4CAF50', '#2196F3', 'pink', 'green', 'purple', 'blue', 'yellow', 'black', 'orange'];
+                for (let i = 0; i < 300; i++) {
+                    confetti.push({
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        size: Math.random() * 10 + 5,
+                        speedX: Math.random() * 3 - 1.5,
+                        speedY: Math.random() * 3 + 2,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                    });
+                }
+            }
+
+            function renderConfetti() {
+                confettiContext.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                confetti.forEach((particle, index) => {
+                    confettiContext.fillStyle = particle.color;
+                    confettiContext.fillRect(particle.x, particle.y, particle.size, particle.size);
+                    particle.x += particle.speedX;
+                    particle.y += particle.speedY;
+                    if (particle.y > window.innerHeight) {
+                        confetti[index].y = -10;
+                    }
+                });
+                requestAnimationFrame(renderConfetti);
+            }
+
+            function resizeCanvas() {
+                confettiCanvas.width = window.innerWidth;
+                confettiCanvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+            createConfetti();
+            renderConfetti();
+        });
+    </script>
+</body>
+</html>
